@@ -1,0 +1,20 @@
+﻿@page
+@model RazorPagesInMemory.Pages.CreateModel
+@{
+}
+
+
+<p>Enter a customer name:</p>
+
+<form method="post">
+
+    <div class="form-group">
+        <label asp-for="@Model.Customer.Name" class="control-label"> Name </label>
+        <input asp-for="@Model.Customer.Name" class="form-control" />
+        <span asp-validation-for="@Model.Customer.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+
+</form>

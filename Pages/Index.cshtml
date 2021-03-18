@@ -1,0 +1,40 @@
+﻿@page
+
+@*Pass the inex page model via @model property*@ 
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div>
+    <table class="table-bordered">
+        <thead>
+            <tr>
+                <th> ID</th>
+                <th> Name</th>
+            </tr>
+            
+
+        </thead>
+        <tbody>
+            @foreach (var cus in Model.ListCustomers)
+            {
+            <tr>
+                <td>
+                    @cus.Id
+                </td>
+                <td>
+                    @cus.Name
+                </td>
+            </tr>               
+
+            }
+
+        </tbody>
+
+    </table>
+
+</div>
+
+
